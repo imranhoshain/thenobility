@@ -1,5 +1,7 @@
+(function ($) {
+    "use strict";
 
-$(document).ready(function(){
+    jQuery(document).ready(function ($) {
     //Responsive Menu
 	$('#menu').slicknav();
     
@@ -82,3 +84,4 @@ $(window).scroll(function(){
                     }
                 });
         });
+}(jQuery));

@@ -201,19 +201,19 @@ function thenobility_theme_options($options)
                     array(
                         'id' => 'footer_location_find_array',
                         'type' => 'group',
-                        'title' => 'Footer Social Link Add',
+                        'title' => 'Add widget show you location',
                         'button_title' => 'Add New',
-                        'accordion_title' => 'Add New Social Link',
+                        'accordion_title' => 'Add New location info',
                         'fields' => array(
                             array(
                                 'id' => 'footer_location_icon',
                                 'type' => 'icon',
-                                'title' => 'Select footer social Icon'
+                                'title' => 'Select location Icon'
                             ),
                             array(
                                 'id' => 'footer_location_detail',
                                 'type' => 'text',
-                                'title' => 'Select social footer link'
+                                'title' => 'Your detail location'
                             )
                         )
                     ),                   

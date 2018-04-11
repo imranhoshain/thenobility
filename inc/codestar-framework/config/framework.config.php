@@ -5,12 +5,12 @@
 // -----------------------------------------------------------------------------------------------
 // ===============================================================================================
 $settings           = array(
-  'menu_title'      => 'Framework',
+  'menu_title'      => 'Thenobility Framework',
   'menu_type'       => 'menu', // menu, submenu, options, theme, etc.
   'menu_slug'       => 'cs-framework',
   'ajax_save'       => false,
   'show_reset_all'  => false,
-  'framework_title' => 'Codestar Framework <small>by Codestar</small>',
+  'framework_title' => 'Thenobility Framework <small>by W3codex</small>',
 );
 
 // ===============================================================================================

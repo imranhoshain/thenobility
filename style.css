@@ -156,13 +156,12 @@ ul li {
 
 /*=========Header area css===========*/
 
-/*header {
-    position: absolute;
+header {    
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
-}*/
+}
 
 .header-top {
     background: #1b212a;
@@ -261,7 +260,7 @@ ul li {
 /*========= viewport-area css =========*/
 
 .viewport-area {
-    background: url(../image/banner.jpg);
+    
     background-size: cover;
     background-position: center;
     background-color: #ddd;
@@ -523,7 +522,7 @@ ul li {
 }
 
 .volunteer-image {
-    height: 290px;
+    
     width: 263px;
     position: relative;
 }
@@ -546,15 +545,13 @@ ul li {
 .volunteer-icons ul li a {
     color: #1b212a;
     background: #fff;
-    display: inline-block;
-    height: 35px;
-    width: 35px;
+    display: inline-block;    
+    
     transition: .3s;
 }
 
 .volunteer-icons ul li a i.fa {
-    font-size: 16px;
-    line-height: 40px;
+      
 }
 
 .volunteer-icons ul li a:hover {
@@ -589,7 +586,7 @@ ul li {
 }
 
 .single-doner img {
-    height: 100%;
+    height: 100% !important;
     width: 100%;
 }
 
@@ -785,7 +782,7 @@ ul li {
     top: 0;
     left: 0;
     display: block;
-    margin-top: 18%;
+    
 }
 
 .testimonial-content p,
@@ -795,10 +792,11 @@ ul li {
 }
 
 .testimonial-content img {
-    width: 165px;
-    height: 165px;
+    width: 165px !important;
+    height: 165px !important;
     border-radius: 10px;
     margin-bottom: 30px;
+    margin: 0 auto;
 }
 
 .testimonial-content p {
@@ -811,7 +809,7 @@ ul li {
 
 .testimonial-content h5 {
     text-align: right;
-    padding-right: 15%;
+    padding-right: 11%;
     margin-bottom: 0;
 }
 
@@ -822,11 +820,8 @@ ul li {
     font-family: 'Open Sans', sans-serif;
 }
 
-/*====== contact us css =====*/
 
-.contact us {
-    display: block;
-}
+/*====== contact us css =====*/
 
 .tnp-widget input[type="text"], .tnp-widget input[type="email"], .tnp-widget select {
     width: 100% !important;
@@ -856,13 +851,53 @@ textarea {
     padding: 0;
 }
 
+
+.contact us {
+    display: block;
+}
+input[type="text"], input[type="email"], input[type="text"], textarea {
+    background: #ebebeb none repeat scroll 0 0;
+    border: 1px solid #0d68ff;
+    height: 50px;
+    margin-bottom: 30px;
+    outline: medium none;
+    padding-left: 10px;
+    width: 100%;
+}
+textarea {
+    height: 150px;
+}
+input[type="submit"] {
+    background: #0d68ff none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    font-family: "Raleway",sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 8px 50px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
+.submit-btn {
+    background: #0d68ff none repeat scroll 0 0;
+    border: medium none;
+    color: #fff;
+    font-family: "Raleway",sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 8px 50px;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+
 .submit-btn i.fa {
     margin-left: 5px;
 }
-
 .submit-btn:hover {
-    background: #1b212a;
+    background: #1b212a none repeat scroll 0 0;
 }
+
 
 /*====== footer css======*/
 
@@ -999,7 +1034,6 @@ textarea {
 /*** Header sticky menu****/
 
 .nav-area {
-    /*position: absolute;*/
     left: 0;
     top: 74px;
     width: 100%;
@@ -1042,6 +1076,10 @@ textarea {
         font-size: 15px;
         line-height: 36px;
     }
+
+    .nav-area{
+    visibility: hidden;
+}
 
     .js #menu {
         display: none;
@@ -1161,7 +1199,9 @@ textarea {
     .nav-area.sticky {
         display: none;
     }
-
+.nav-area{
+    visibility: hidden;
+}
     .header-top {
         display: block;
     }
@@ -1277,6 +1317,8 @@ textarea {
 /*// Medium devices (tablets, 768px and up)*/
 
 @media (min-width: 768px) and (max-width: 991.98px) {
+    
+
     .menu-btn a {
         font-size: 12px;
         padding: 8px 10px;
