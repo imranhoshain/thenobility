@@ -381,4 +381,4 @@ if ( ! function_exists( 'cs_language_defaults' ) ) {
  * @version 1.0.0
  *
  */
-load_textdomain( 'cs-framework', CS_DIR .'/languages/'. get_locale() .'.mo' );
+load_textdomain( 'thenobility', CS_DIR .'/languages/'. get_locale() .'.mo' );

@@ -2,6 +2,7 @@
 
 get_template_part( '/inc/codestar-framework/cs-framework' ) ;
 
+
 // framework Metabox options filter example
 
 function thenobility_cs_framework_options($options)
@@ -9,7 +10,113 @@ function thenobility_cs_framework_options($options)
     
     $options = array(); // remove old options   
    
-    
+    $options[] = array(
+        'id' => 'thenobility_slide_meta',
+        'title' => 'Slide Options',
+        'post_type' => 'thenobility-slide',
+        'context' => 'normal',
+        'priority' => 'default',
+        'sections' => array(
+            array(
+                'name' => 'thenobility_slide_metabox',
+                'title' => 'Slide Options',
+                'fields' => array(
+                    // begin: a field
+                    array(
+                        'id' => 'slider_width',
+                        'type' => 'select',
+                        'title' => 'Select slider text Width',
+                        'options' => array(
+                            'col-md-4' => '4 Columns',
+                            'col-md-5' => '5 Columns',
+                            'col-md-6' => '6 Columns',
+                            'col-md-7' => '7 Columns',
+                            'col-md-8' => '8 Columns',
+                            'col-md-9' => '9 Columns',
+                            'col-md-10' => '10 Columns',
+                            'col-md-11' => '11 Columns',
+                            'col-md-12' => '12 Columns'
+                            
+                        ),
+                        'default' => 'col-md-6'
+                    ),
+                    // end: a field
+                    array(
+                        'id' => 'slider_offset',
+                        'type' => 'select',
+                        'title' => 'Select text offset',
+                        'options' => array(
+                            'col-md-offset-1' => '1 Columns',
+                            'col-md-offset-2' => '2 Columns',
+                            'col-md-offset-3' => '3 Columns',
+                            'col-md-offset-4' => '4 Columns',
+                            'col-md-offset-5' => '5 Columns',
+                            'col-md-offset-6' => '6 Columns',
+                            'col-md-offset-7' => '7 Columns',
+                            'col-md-offset-8' => '8 Columns'
+                            
+                        ),
+                        'default' => 'no-offset'
+                    ),
+                    // end: a field
+                    array(
+                        'id' => 'slider_text_align',
+                        'type' => 'select',
+                        'title' => 'Select text align',
+                        'options' => array(
+                            'center' => 'Center',
+                            'left' => 'Left',
+                            'right' => 'Right'
+                        ),
+                        'default' => 'left'
+                        
+                    ),
+                    // end: a field
+                    
+                    array(
+                        'id' => 'text_color',
+                        'type' => 'color_picker',
+                        'title' => 'Slider text color',
+                        'default' => '#2ecc71'
+                    ),
+                    // end: a field
+                    array(
+                        'id' => 'enable_overlay',
+                        'type' => 'switcher',
+                        'title' => 'Overlay Oprion',
+                        'default' => 'false'
+                    ),
+                    // end: a field  
+                    array(
+                        'id' => 'overlay_color',
+                        'type' => 'color_picker',
+                        'title' => 'Overlay Color',
+                        'desc' => 'Type a Overlay Color',
+                        'default' => '#333',
+                        'dependency' => array(
+                            'enable_overlay',
+                            '==',
+                            'true'
+                        ) // dependency rule
+                    ),
+                    // end: a field 
+                    array(
+                        'id' => 'overlay_opacity',
+                        'type' => 'number',
+                        'title' => 'Overlay Opacity',
+                        'desc' => 'Type a Opacity number',
+                        'default' => '70',
+                        'dependency' => array(
+                            'enable_overlay',
+                            '==',
+                            'true'
+                        ) // dependency rule
+                    )
+                    // end: a field       
+                )
+            )
+        )
+    );
     //All page option meta    
     $options[] = array(
         'id' => 'thenobility_page_meta',
@@ -63,8 +170,8 @@ function thenobility_cs_framework_options($options)
                         'type' => 'select',
                         'title' => 'Select Header Style',
                         'options' => array(
-                            '1' => 'Header 1',
-                            '2' => 'Header 2'
+                            '8' => 'Header 1',
+                            '12' => 'Header 2'
                         ),
                         'default' => 'Header 1'
                     )
@@ -183,9 +290,58 @@ function thenobility_theme_options($options)
         )
     );
 //End header acordian option
+
+//Blog Option Start
+$options[] = array(
+        'name' => 'thenobility_blog_options',
+        'title' => 'Blog Options',
+        'icon' => 'fa fa-heart',
+        'fields' => array(
+            array(
+                'id' => 'enable_post_by',
+                'type' => 'switcher',
+                'title' => 'Display Posted By',
+                'default' => true
+            ),
+            array(
+                'id' => 'enable_posted_on',
+                'type' => 'switcher',
+                'title' => 'Display Posted On',
+                'default' => true
+            ),
+            array(
+                'id' => 'enable_post_category',
+                'type' => 'switcher',
+                'title' => 'Display Posted category',
+                'default' => true
+            ), 
+            array(
+                'id' => 'enable_post_tag',
+                'type' => 'switcher',
+                'title' => 'Display Posted Tag',
+                'default' => true
+            ),
+            array(
+                'id' => 'enable_single_post_pagination',
+                'type' => 'switcher',
+                'title' => 'Display Single Post Pagination',
+                'default' => true
+            ),
+
+            array(
+                'id' => 'blog_full_width',
+                'type' => 'switcher',
+                'title' => 'Display Full Width Blog',
+                'default' => false
+            ),
+        )
+        
+    );
+
+//Blog Option End
     
     
-    //Start footer acordian
+//Start footer acordian
    $options[] = array(
         'name' => 'footer_options',
         'title' => 'Footer Options',

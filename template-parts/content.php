@@ -22,8 +22,7 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				thenobility_posted_on();
-				thenobility_posted_by();
+								
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -54,6 +53,16 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php thenobility_entry_footer(); ?>
+		
+		<ul>
+			<li>
+				<?php
+				thenobility_posted_by();
+				thenobility_entry_footer();
+				thenobility_posted_on();				
+				?>
+			</li>
+		</ul>
+			 
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

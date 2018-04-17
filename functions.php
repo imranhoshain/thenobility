@@ -91,17 +91,29 @@ function thenobility_content_width() {
 }
 add_action( 'after_setup_theme', 'thenobility_content_width', 0 );
 
+//Blog page pagination
+if ( ! function_exists( 'post_pagination' ) ) :
+   function post_pagination() {
+     the_posts_pagination( array(
+    'mid_size' => 2,
+    'prev_text' => __( '&laquo;', 'thenobility' ),
+    'next_text' => __( '&raquo', 'thenobility' ),
+) );
+   }
+endif;
+
+
 
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+include_once (get_template_directory() . '/inc/template-tags.php');
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
+include_once (get_template_directory() . '/inc/template-functions.php');
 
 /**
  * Implement the Custom Widget feature.
@@ -117,3 +129,10 @@ include_once (get_template_directory() . '/inc/enqueue.php');
  * Themeoptions and metabox functions.
  */
 include_once (get_template_directory().'/inc/theme-metabox-and-options.php');
+
+
+/**
+ * Plugin Required File
+ */
+include_once (get_template_directory().'/inc/class-tgm-plugin-activation.php');
+include_once (get_template_directory().'/inc/required-plugins.php');

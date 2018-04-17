@@ -21,8 +21,7 @@ get_header();
 		$page_meta = get_post_meta( $post->ID, 'thenobility_page_meta', true );
 	}else{
 		$page_meta = array();
-	}
-
+	}	
 //Page title condition
 	if(array_key_exists('enable_title', $page_meta)){
 		$enable_title = $page_meta['enable_title'];

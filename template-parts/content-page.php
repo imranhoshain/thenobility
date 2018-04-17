@@ -9,13 +9,13 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php //industry_demo_post_thumbnail(); ?>
+
 	<div class="entry-content">
 		<?php
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'industry-demo' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'thenobility' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -28,7 +28,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'industry-demo' ),
+							__( 'Edit <span class="screen-reader-text">%s</span>', 'thenobility' ),
 							array(
 								'span' => array(
 									'class' => array(),

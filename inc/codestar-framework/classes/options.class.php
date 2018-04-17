@@ -122,19 +122,19 @@ abstract class CSFramework_Options extends CSFramework_Abstract {
       $value = $this->element_value();
 
       $out .= "<pre>";
-      $out .= "<strong>". esc_html__( 'CONFIG', 'cs-framework' ) .":</strong>";
+      $out .= "<strong>". esc_html__( 'CONFIG', 'thenobility' ) .":</strong>";
       $out .= "\n";
       ob_start();
       var_export( $this->field );
       $out .= htmlspecialchars( ob_get_clean() );
       $out .= "\n\n";
-      $out .= "<strong>". esc_html__( 'USAGE', 'cs-framework' ) .":</strong>";
+      $out .= "<strong>". esc_html__( 'USAGE', 'thenobility' ) .":</strong>";
       $out .= "\n";
       $out .= ( isset( $this->field['id'] ) ) ? "cs_get_option( '". $this->field['id'] ."' );" : '';
 
       if( ! empty( $value ) ) {
         $out .= "\n\n";
-        $out .= "<strong>". esc_html__( 'VALUE', 'cs-framework' ) .":</strong>";
+        $out .= "<strong>". esc_html__( 'VALUE', 'thenobility' ) .":</strong>";
         $out .= "\n";
         ob_start();
         var_export( $value );
@@ -148,11 +148,11 @@ abstract class CSFramework_Options extends CSFramework_Abstract {
     if( ( isset( $this->field['debug_light'] ) && $this->field['debug_light'] === true ) || ( defined( 'CS_OPTIONS_DEBUG_LIGHT' ) && CS_OPTIONS_DEBUG_LIGHT ) ) {
 
       $out .= "<pre>";
-      $out .= "<strong>". esc_html__( 'USAGE', 'cs-framework' ) .":</strong>";
+      $out .= "<strong>". esc_html__( 'USAGE', 'thenobility' ) .":</strong>";
       $out .= "\n";
       $out .= ( isset( $this->field['id'] ) ) ? "cs_get_option( '". $this->field['id'] ."' );" : '';
       $out .= "\n";
-      $out .= "<strong>". esc_html__( 'ID', 'cs-framework' ) .":</strong>";
+      $out .= "<strong>". esc_html__( 'ID', 'thenobility' ) .":</strong>";
       $out .= "\n";
       $out .= ( isset( $this->field['id'] ) ) ? $this->field['id'] : '';
       $out .= "</pre>";
@@ -224,7 +224,7 @@ abstract class CSFramework_Options extends CSFramework_Abstract {
 
       $out .= '<input type="hidden" name="'. $this->element_name( '[multilang]', true ) .'" value="true" />';
       $out .= '</fieldset>';
-      $out .= '<p class="cs-text-desc">'. sprintf( esc_html__( 'You are editing language: ( %s )', 'cs-framework' ), '<strong>'. $this->multilang['current'] .'</strong>' ) .'</p>';
+      $out .= '<p class="cs-text-desc">'. sprintf( esc_html__( 'You are editing language: ( %s )', 'thenobility' ), '<strong>'. $this->multilang['current'] .'</strong>' ) .'</p>';
 
     }
 

@@ -1,5 +1,23 @@
-/*==== Default Css ====*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Default Css
+# Accessibility
+# Alignments
+# Widgets
+# Content
+    ## Posts and pages
+    ## Comments
+# Infinite scroll
+# Media
+    ## Captions
+    ## Galleries
+# Padding Options
+--------------------------------------------------------------*/
 
+
+
+/*==== Default Css ====*/
 
 img {
     height: auto;
@@ -169,7 +187,6 @@ h6 {
 }
 
  .page-content,
-.entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 } 
@@ -310,14 +327,21 @@ object {
     display: block;
 }
 
+
+/*=== Padding Options ===*/
+
+.sp-20 {
+    padding: 20px 0;
+}
+
 .sp-60 {
     padding: 60px 0;
 }
 
+.sp-80{
+    padding: 80px 0;
+}
 
-
-/*Padding Options*/
-
-.sp-20 {
-    padding: 20px 0;
+.mb20{
+    margin-bottom: 20px;
 }

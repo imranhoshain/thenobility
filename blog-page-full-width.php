@@ -1,20 +1,9 @@
 <?php
-/**
- * The template for displaying all pages
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package thenobility
- */
-
-get_header();
-?>
-
+/*
+*
+Template Name: Full-Width
+*/
+get_header(); ?>
 <div style="background-image: url(<?php the_post_thumbnail_url('large') ?>);" class="thenobility-page-title-area">
 	<div class="container">
 		<div class="row ">
@@ -29,12 +18,7 @@ get_header();
 		<main id="main" class="site-main">
 			<div class="container">
 				<div class="row">
-			<?php
-			$full_width = cs_get_option('blog_full_width'); //From Codestar Theme Option
-
-		?>
-					<div class="<?php if($full_width != false) { echo "col-md-12";} else{ echo "col-md-8";}	?>">
-
+					<div class="col-md-12">
 						<div class="thenobility-article-list">
 							<?php
 							if ( have_posts() ) :
@@ -52,8 +36,7 @@ get_header();
 									 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 									 */
 									get_template_part( 'template-parts/content', get_post_format() );
-								endwhile; ?>	
-
+								endwhile; ?>								
 								<div class="pagination-link">
 									<?php
 										post_pagination();
@@ -66,7 +49,7 @@ get_header();
 						endif; ?>
 						</div>
 					</div>						
-						<?php if($full_width == false){ get_sidebar(); }?>														
+																				
 				</div>
 			</div>
 		</main><!-- #main -->
